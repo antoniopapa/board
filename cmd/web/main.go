@@ -11,11 +11,14 @@ import (
 type application struct {
 	logger *slog.Logger
 	templateCache map[string]*template.Template
+	tier string
 }
 
 func main() {
 	//Get env variables
 	addr := flag.String("addr", ":4000", "HTTP network address")
+	tier := flag.String("tier", "starter", "tier the core is on")
+	flag.Parse()
 	//Set up logger
 	logger := slog.New(slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{
 		AddSource: true,
@@ -30,6 +33,7 @@ func main() {
 	app := application {
 		logger: logger,
 		templateCache: templateCache,
+		tier: *tier,
 	}
 
 	err = http.ListenAndServe(*addr, app.routes())

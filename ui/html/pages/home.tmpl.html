@@ -1,5 +1,19 @@
 {{define "title"}}Home{{end}}
 
 {{define "main"}}
-    yo
+    <section class="app-links">
+        <h2 class="app-links-title">Apps for {{.BaseUri}} on the {{.Tier}} tier.</h2>
+        <div class="app-links-container">
+            <!-- LOOP HERE -->
+             {{range .AppLinks}}
+             <a href="{{.Url}}" class="app-link-card-link">
+                <div class="app-link-card">
+                    <h3 class="app-link-card__title">{{.Title}}</h3>
+                    <p class="app-link-card__description">{{.Description}}</p>
+                    <img src="{{.Image}}" alt="" class="app-link-card__image">
+                </div>
+            </a>
+             {{end}}
+        </div>
+    </section>
 {{end}}

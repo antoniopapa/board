@@ -7,6 +7,8 @@ import (
 
 type templateData struct {
 	BaseUri string
+	AppLinks []AppLink
+	Tier string
 }
 
 func newTemplateCache() (map[string]*template.Template, error) {
