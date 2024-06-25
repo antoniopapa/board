@@ -9,6 +9,8 @@ func (app *application) routes() *http.ServeMux {
 	mux.Handle("GET /static/", http.StripPrefix("/static", fileServer))
 	//Set up routes
 	mux.HandleFunc("GET /{$}", app.home)
-	
+	mux.HandleFunc("GET /", app.notFound)
+	mux.HandleFunc("GET /vpn/{$}", app.vpn)
+
 	return mux
 }

@@ -8,6 +8,11 @@ import (
 	"flag"
 )
 
+//TODO Get images for each app
+//TODO Stylesheet
+//TODO VPN Page
+//TODO Auth through LDAP for VPN page
+
 type application struct {
 	logger *slog.Logger
 	templateCache map[string]*template.Template

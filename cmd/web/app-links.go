@@ -24,20 +24,26 @@ func getStarterLinks(baseUri string) []AppLink {
 		{
 			Title: "User Management",
 			Description: "Create users and manage their access",
-			Image: "/img/panel.jpg",
+			Image: "/static/img/users.png",
 			Url: "https://panel." + baseUri,
 		},
 		{
 			Title: "Nextcloud",
 			Description: "Email, Files, Documents",
-			Image: "/img/nextcloud.jpg",
+			Image: "/static/img/nextcloud.png",
 			Url: "https://nextcloud." + baseUri,
 		},
 		{
 			Title: "Vaultwarden",
 			Description: "Password Management",
-			Image: "/img/vaultwarden.jpg",
+			Image: "/static/img/vaultwarden.png",
 			Url: "https://vaultwarden." + baseUri,
+		},
+		{
+			Title: "Power DNS",
+			Description: "DNS Management",
+			Image: "/static/img/powerdns.png",
+			Url: "https://powerdns." + baseUri,
 		},
 	}
 }
@@ -47,13 +53,13 @@ func getCreatorLinks(baseUri string) []AppLink {
 		{
 			Title: "Element and Matrix",
 			Description: "Team Chat",
-			Image: "/img/element.jpg",
+			Image: "/static/img/element.png",
 			Url: "https://element." + baseUri,
 		},
 		{
 			Title: "Wordpress",
 			Description: "Your website",
-			Image: "/img/wordpress.jpg",
+			Image: "/static/img/wordpress.png",
 			Url: "https://" + baseUri,
 		},
 	}
@@ -66,13 +72,13 @@ func getTeamsLinks(baseUri string) []AppLink {
 		{
 			Title: "Espo CRM",
 			Description: "Customer relationship manager",
-			Image: "/img/espo.jpg",
+			Image: "/static/img/espo.png",
 			Url: "https://espocrm." + baseUri,
 		},
 		{
 			Title: "FreeScout",
 			Description: "Customer Help Desk",
-			Image: "/img/freescout.jpg",
+			Image: "/static/img/freescout.png",
 			Url: "https://freescout." + baseUri,
 		},
 	}
@@ -85,37 +91,37 @@ func getEnterpriseLinks(baseUri string) []AppLink {
 		{
 			Title: "Jitsi",
 			Description: "Video Chat",
-			Image: "/img/jitsi.jpg",
+			Image: "/static/img/jitsi.png",
 			Url: "https://jitsi." + baseUri,
 		},
 		{
 			Title: "Listmonk",
 			Description: "Email Marketing",
-			Image: "/img/listmonk.jpg",
+			Image: "/static/img/listmonk.png",
 			Url: "https://listmonk." + baseUri,
 		},
 		{
 			Title: "Baserow",
 			Description: "Visual Databases",
-			Image: "/img/baserow.jpg",
+			Image: "/static/img/baserow.png",
 			Url: "https://baserow." + baseUri,
 		},
 		{
 			Title: "Bookstack",
 			Description: "Wiki Knowledgebase",
-			Image: "/img/bookstack.jpg",
+			Image: "/static/img/bookstack.png",
 			Url: "https://bookstack." + baseUri,
 		},
 		{
 			Title: "Gitea",
 			Description: "GIT Source Control",
-			Image: "/img/gitea.jpg",
+			Image: "/static/img/gitea.png",
 			Url: "https://gitea." + baseUri,
 		},
 		{
 			Title: "Castopod",
 			Description: "Podcast Distribution",
-			Image: "/img/castopod.jpg",
+			Image: "/static/img/castopod.png",
 			Url: "https://castopod." + baseUri,
 		},	
 	}

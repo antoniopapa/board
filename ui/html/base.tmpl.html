@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Federated Core Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Federated Computer</h1>
+    <header class="header main-grid">
+        <h1 class="header__title">Federated Core</h1>
     </header>
     {{template "nav" .}}
-    <main>
+    <main class="main main-grid">
         {{template "main" .}}
     </main>
-    <footer>
+    <footer class="footer main-grid">
         Powered by Federated Computer
     </footer>
 </body>
