@@ -8,11 +8,6 @@ import (
 	"flag"
 )
 
-//TODO Get images for each app
-//TODO Stylesheet
-//TODO VPN Page
-//TODO Auth through LDAP for VPN page
-
 type application struct {
 	logger *slog.Logger
 	templateCache map[string]*template.Template
@@ -21,7 +16,7 @@ type application struct {
 
 func main() {
 	//Get env variables
-	addr := flag.String("addr", ":4000", "HTTP network address")
+	addr := flag.String("addr", ":8080", "HTTP network address")
 	tier := flag.String("tier", "starter", "tier the core is on")
 	flag.Parse()
 	//Set up logger
