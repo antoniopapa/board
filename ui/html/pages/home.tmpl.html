@@ -2,7 +2,7 @@
 
 {{define "main"}}
     <section class="app-links">
-        <h2 class="app-links-title">Apps for {{.BaseUri}} on the {{.Tier}} tier.</h2>
+        <h2 class="app-links-title">Apps for {{.BaseUri}} on the {{.Tier}} plan.</h2>
         <div class="app-links-container">
             <!-- LOOP HERE -->
             {{range .AppLinks}}
@@ -15,6 +15,6 @@
                 </a>
             {{end}}
         </div>
-        <p>All Logos are Property of Their Respective Project</p>
+        <p class="app-links-attribution">All Logos are Property of Their Respective Project</p>
     </section>
 {{end}}

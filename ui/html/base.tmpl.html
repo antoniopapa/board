@@ -13,13 +13,13 @@
 <body>
     <header class="header main-grid">
         <h1 class="header__title">Federated Core</h1>
+        {{template "nav" .}}
     </header>
-    {{template "nav" .}}
     <main class="main main-grid">
         {{template "main" .}}
     </main>
     <footer class="footer main-grid">
-        Powered by Federated Computer
+        <p class="footer__excerpt">Powered by <a href="https://www.federated.computer">Federated Computer</a></p>
     </footer>
 </body>
 </html>

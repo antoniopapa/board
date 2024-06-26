@@ -20,6 +20,9 @@ body {
     line-height: 1.6;
     font-size: 1.25rem;
     -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 /*
 5. Improve media defaults
@@ -57,7 +60,7 @@ h1 {
 
 .main-grid {
     display: grid;
-    grid-template-columns: minmax(1em 1fr) minmax(1em 1fr) minmax(1em 1fr);
+    grid-template-columns: 1fr 2fr 1fr;
 }
 
 /* HEADER */
@@ -68,8 +71,85 @@ h1 {
     text-transform: uppercase;
 }
 
+.header__title {
+    grid-column: 2/3;
+}
+
 /* Nav */
 
 .nav {
+    text-align: center;
+    margin-bottom: 10vh;
+    grid-column: 2/3;
+}
 
+.nav-list {
+    grid-column: 2/3;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-transform: uppercase;
+}
+
+.nav-link a{
+    text-decoration: none;
+    color: black;
+}
+
+/* App Links */
+
+.app-links {
+    grid-column: 2/3;
+    text-align: center;
+}
+
+.app-links-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin-top: 3em;
+}
+
+@media (max-width: 449px) {
+    .app-links-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.app-link-card-link {
+    text-decoration: none;
+    color: black;
+}
+
+.app-link-card {
+    margin-bottom: 1em;
+    max-width: 250px;
+    text-align: center;
+}
+
+.app-link-card__image {
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.app-links-attribution {
+    font-size: .6rem;
+    color: rgb(122, 116, 116);
+}
+
+/* Footer */ 
+
+.footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer__excerpt {
+    grid-column: 2/3;
 }
