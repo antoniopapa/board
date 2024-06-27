@@ -5,12 +5,10 @@ import (
 )
 
 func (app *application) home(writer http.ResponseWriter, request *http.Request) {
-	baseURI := request.Host
-
 	data := templateData{ 
-		AppLinks: getAppLinks(app.tier, baseURI),
+		AppLinks: getAppLinks(app.tier, app.host),
 		Tier: app.tier,
-		BaseUri: baseURI,
+		BaseUri: app.host,
 	}
 
 	app.render(writer, request, http.StatusOK, "home.tmpl.html", data)
