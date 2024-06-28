@@ -150,6 +150,8 @@ h1 {
     text-align: center;
 }
 
-.footer__excerpt {
+.footer__excerpt,
+.footer__kitty {
     grid-column: 2/3;
+    justify-self: center;
 }

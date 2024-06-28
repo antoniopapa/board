@@ -40,7 +40,7 @@ func getStarterLinks(baseUri string) []AppLink {
 			Title: "User Management",
 			Description: "Create and Manage Users",
 			Image: "/static/img/users.png",
-			Url: "https://panel." + baseUri,
+			Url: "https://panel." + baseUri + "/log_in/",
 		},
 		{
 			Title: "Nextcloud",
@@ -75,7 +75,7 @@ func getCreatorLinks(baseUri string) []AppLink {
 			Title: "Wordpress",
 			Description: "Your website",
 			Image: "/static/img/wordpress.png",
-			Url: "https://" + baseUri,
+			Url: "https://" + baseUri + "/wp-admin",
 		},
 	}
 
@@ -137,7 +137,7 @@ func getEnterpriseLinks(baseUri string) []AppLink {
 			Title: "Castopod",
 			Description: "Podcast Distribution",
 			Image: "/static/img/castopod.png",
-			Url: "https://castopod." + baseUri,
+			Url: "https://castopod." + baseUri + "/cp-auth/login",
 		},	
 	}
 
