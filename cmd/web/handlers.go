@@ -5,8 +5,10 @@ import (
 )
 
 func (app *application) home(writer http.ResponseWriter, request *http.Request) {
+	appLinks := getAppLinks(app.tier, app.host)
+
 	data := templateData{ 
-		AppLinks: getAppLinks(app.tier, app.host),
+		AppLinks: appLinks,
 		Tier: app.tier,
 		BaseUri: app.host,
 	}

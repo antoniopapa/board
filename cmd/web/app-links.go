@@ -1,5 +1,10 @@
 package main
 
+import (
+	"slices"
+	"strings"
+)
+
 type AppLink struct {
 	Title string
 	Url string
@@ -8,22 +13,32 @@ type AppLink struct {
 }
 
 func getAppLinks(tier, baseUri string) []AppLink {
+	var output []AppLink
+
+	//Get Links Based on Tier
 	if tier == "enterprise" {
-		return getEnterpriseLinks(baseUri)
+		output = getEnterpriseLinks(baseUri)
 	} else if tier == "creator" {
-		return getCreatorLinks(baseUri)
+		output = getCreatorLinks(baseUri)
 	} else if tier == "teams" {
-		return getTeamsLinks(baseUri)
+		output = getTeamsLinks(baseUri)
+	} else {
+		output = getStarterLinks(baseUri)
 	}
 
-	return getStarterLinks(baseUri)
+	//Sort in alphabetical order
+	slices.SortFunc(output, func(a, b AppLink) int {
+		return strings.Compare(a.Title, b.Title)
+	})
+
+	return output
 }
 
 func getStarterLinks(baseUri string) []AppLink {
 	return []AppLink {
 		{
 			Title: "User Management",
-			Description: "Create users and manage their access",
+			Description: "Create and Manage Users",
 			Image: "/static/img/users.png",
 			Url: "https://panel." + baseUri,
 		},
