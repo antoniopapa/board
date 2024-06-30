@@ -66,7 +66,7 @@ func getStarterLinks(baseUri string) []AppLink {
 func getCreatorLinks(baseUri string) []AppLink {
 	creatorLinks := []AppLink {
 		{
-			Title: "Element and Matrix",
+			Title: "Element",
 			Description: "Team Chat",
 			Image: "/static/img/element.png",
 			Url: "https://element." + baseUri,
