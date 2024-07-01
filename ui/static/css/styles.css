@@ -73,13 +73,14 @@ h1 {
 
 .header__title {
     grid-column: 2/3;
+    margin-top: 2em;
 }
 
 /* Nav */
 
 .nav {
     text-align: center;
-    margin-bottom: 10vh;
+    margin-bottom: 1em;
     grid-column: 2/3;
 }
 
@@ -114,6 +115,7 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     margin-top: 3em;
+    gap: 3em;
 }
 
 @media (max-width: 449px) {
@@ -125,6 +127,7 @@ h1 {
 .app-link-card-link {
     text-decoration: none;
     color: black;
+    display: contents;
 }
 
 .app-link-card {
@@ -141,6 +144,10 @@ h1 {
 .app-links-attribution {
     font-size: .6rem;
     color: rgb(122, 116, 116);
+}
+
+.app-link-card__ldap-notice {
+    font-size: .75rem;
 }
 
 /* Footer */ 

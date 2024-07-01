@@ -2,7 +2,7 @@
 
 {{define "main"}}
     <section class="app-links">
-        <h2 class="app-links-title">Apps for {{.BaseUri}} on the {{.Tier}} plan.</h2>
+        <h2 class="app-links-title">Apps for {{.BaseUri}} on the {{.Tier}} plan:</h2>
         <div class="app-links-container">
             <!-- LOOP HERE -->
             {{range .AppLinks}}
@@ -11,6 +11,17 @@
                         <img src="{{.Image}}" alt="" class="app-link-card__image">
                         <h3 class="app-link-card__title">{{.Title}}</h3>
                         <p class="app-link-card__description">{{.Description}}</p>
+                        {{with .DocumentationUrl}}
+                            <p><a href="{{.}}" class="documentation-link" target="_blank">Documentation</a></p>
+                        {{end}}
+                        {{if .LDAP}}
+                            <p class="app-link-card__ldap-notice">*Users Managed Via Panel</p>
+                        {{else}}
+                            <p class="app-link-card__ldap-notice">*Users Not Managed Via Panel</p>
+                        {{end}}
+                        {{with .SpecialNote}}
+                            <p class="app-link-card__ldap-notice">*{{.}}</p>
+                        {{end}}
                     </div>
                 </a>
             {{end}}
