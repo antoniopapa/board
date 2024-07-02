@@ -62,6 +62,7 @@ func getStarterLinks(baseUri string) []AppLink {
 			Url: "https://vaultwarden." + baseUri,
 			LDAP: false,
 			SpecialNote: "Must create your own admin user at setup.",
+			DocumentationUrl: "https://bitwarden.com/help/onboarding-and-succession/",
 		},
 		{
 			Title: "Power DNS",
@@ -69,6 +70,7 @@ func getStarterLinks(baseUri string) []AppLink {
 			Image: "/static/img/powerdns.png",
 			Url: "https://powerdns." + baseUri,
 			LDAP: false,
+			DocumentationUrl: "https://doc.powerdns.com/",
 		},
 	}
 }
@@ -81,6 +83,7 @@ func getCreatorLinks(baseUri string) []AppLink {
 			Image: "/static/img/element.png",
 			Url: "https://element." + baseUri,
 			LDAP: true,
+			DocumentationUrl: "https://element.io/user-guide",
 		},
 		{
 			Title: "Wordpress",
@@ -88,6 +91,7 @@ func getCreatorLinks(baseUri string) []AppLink {
 			Image: "/static/img/wordpress.png",
 			Url: "https://" + baseUri + "/wp-admin",
 			LDAP: false,
+			DocumentationUrl: "https://wordpress.org/documentation/",
 		},
 	}
 
@@ -102,6 +106,7 @@ func getTeamsLinks(baseUri string) []AppLink {
 			Image: "/static/img/espo.png",
 			Url: "https://espocrm." + baseUri,
 			LDAP: true,
+			DocumentationUrl: "https://docs.espocrm.com/user-guide/sales-management/",
 		},
 		{
 			Title: "FreeScout",
@@ -123,6 +128,7 @@ func getEnterpriseLinks(baseUri string) []AppLink {
 			Image: "/static/img/jitsi.png",
 			Url: "https://jitsi." + baseUri,
 			LDAP: true,
+			DocumentationUrl: "https://jitsi.github.io/handbook/docs/intro/",
 		},
 		{
 			Title: "Listmonk",
@@ -130,6 +136,7 @@ func getEnterpriseLinks(baseUri string) []AppLink {
 			Image: "/static/img/listmonk.png",
 			Url: "https://listmonk." + baseUri,
 			LDAP: false,
+			DocumentationUrl: "https://listmonk.app/docs/concepts/",
 		},
 		{
 			Title: "Baserow",
@@ -153,6 +160,7 @@ func getEnterpriseLinks(baseUri string) []AppLink {
 			Image: "/static/img/gitea.png",
 			Url: "https://gitea." + baseUri,
 			LDAP: false,
+			DocumentationUrl: "https://docs.gitea.com/category/usage",
 		},
 		{
 			Title: "Castopod",
