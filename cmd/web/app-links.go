@@ -114,6 +114,7 @@ func getTeamsLinks(baseUri string) []AppLink {
 			Image: "/static/img/freescout.png",
 			Url: "https://freescout." + baseUri,
 			LDAP: false,
+			DocumentationUrl: "https://github.com/freescout-help-desk/freescout/wiki/FAQ",
 		},
 	}
 
