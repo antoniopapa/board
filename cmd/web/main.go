@@ -11,7 +11,7 @@ type application struct {
 	logger *slog.Logger
 	templateCache map[string]*template.Template
 	tier string
-	host string
+	domain string
 }
 
 func main() {
@@ -24,9 +24,9 @@ func main() {
 	if len(tier) == 0 {
 		tier = "starter"
 	}
-	host := os.Getenv("HOST")
-	if len(host) == 0 {
-		logger.Error("Must specify host name.")
+	domain := os.Getenv("DOMAIN")
+	if len(domain) == 0 {
+		logger.Error("Must specify domain name.")
 		os.Exit(1)
 	}
 	//Set up template cache
@@ -40,7 +40,7 @@ func main() {
 		logger: logger,
 		templateCache: templateCache,
 		tier: tier,
-		host: host,
+		domain: domain,
 	}
 
 	err = http.ListenAndServe(":8080", app.routes())
