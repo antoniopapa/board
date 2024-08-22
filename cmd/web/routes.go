@@ -11,6 +11,7 @@ func (app *application) routes() *http.ServeMux {
 	mux.HandleFunc("GET /{$}", app.home)
 	mux.HandleFunc("GET /", app.notFound)
 	mux.HandleFunc("GET /vpn/{$}", app.vpn)
+	mux.HandleFunc("GET /apps/{$}", app.appList)
 
 	return mux
 }
