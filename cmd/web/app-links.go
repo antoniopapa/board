@@ -77,7 +77,7 @@ func getStarterLinks(baseUri string) []AppLink {
 			Description: "Email",
 			Image: "/static/img/roundcube.png",
 			Url: "https://roundcube." + baseUri,
-			LDAP: false,
+			LDAP: true,
 			DocumentationUrl: "https://roundcube.net/support/",
 		},
 	}
