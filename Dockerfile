@@ -1,7 +1,5 @@
 FROM golang:1.22-alpine as build
 
-ENV TIER=starter
-
 WORKDIR /build
 COPY . .
 RUN go mod download
