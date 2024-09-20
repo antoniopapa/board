@@ -73,8 +73,8 @@ func getStarterLinks(baseUri string) []AppLink {
 			DocumentationUrl: "https://doc.powerdns.com/",
 		},
 		{
-			Title: "Web Mail",
-			Description: "Email",
+			Title: "Roundcube",
+			Description: "Web Mail",
 			Image: "/static/img/roundcube.png",
 			Url: "https://roundcube." + baseUri,
 			LDAP: true,
