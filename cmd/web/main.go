@@ -12,6 +12,7 @@ type application struct {
 	templateCache map[string]*template.Template
 	tier string
 	domain string
+	appLinks []AppLink
 }
 
 func main() {
@@ -22,7 +23,7 @@ func main() {
 	//Get env variables
 	tier := os.Getenv("TIER")
 	if len(tier) == 0 {
-		tier = "starter"
+		tier = "good"
 	}
 	domain := os.Getenv("DOMAIN")
 	if len(domain) == 0 {
@@ -35,14 +36,17 @@ func main() {
 		logger.Error(err.Error())
 		os.Exit(1)
 	}
+	//Set up app links cache
+	appLinks := getAppLinks(tier, domain)
 	//Set up application data
 	app := application {
 		logger: logger,
 		templateCache: templateCache,
 		tier: tier,
 		domain: domain,
+		appLinks: appLinks,
 	}
-
+	//start server
 	err = http.ListenAndServe(":8080", app.routes())
 	logger.Error(err.Error())
 	os.Exit(1)

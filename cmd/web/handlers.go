@@ -6,10 +6,8 @@ import (
 )
 
 func (app *application) home(writer http.ResponseWriter, request *http.Request) {
-	appLinks := getAppLinks(app.tier, app.domain)
-
 	data := templateData{ 
-		AppLinks: appLinks,
+		AppLinks: app.appLinks,
 		Tier: app.tier,
 		BaseUri: app.domain,
 	}
@@ -26,9 +24,9 @@ func (app *application) vpn(writer http.ResponseWriter, request *http.Request) {
 }
 
 func (app *application) appList(writer http.ResponseWriter, request *http.Request) {
-	appLinks := getAppLinks(app.tier, app.domain)
-    writer.Header().Set("Content-Type", "application/json")
-	data, err := json.Marshal(appLinks)
+	writer.Header().Set("Content-Type", "application/json")
+	
+	data, err := json.Marshal(app.appLinks)
 
 	if err != nil {
 		app.serverError(writer, request, err)
