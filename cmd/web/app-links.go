@@ -232,7 +232,7 @@ var allAppLinks = []AppLink{
 			"free": false,
 			"good": false,
 			"better": false,
-			"best": true,
+			"best": false,
 		},
 	},
 	{
