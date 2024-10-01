@@ -15,7 +15,7 @@
                             <p><a href="{{.}}" class="documentation-link" target="_blank">Documentation</a></p>
                         {{end}}
                         {{if .LDAP}}
-                            <p class="app-link-card__ldap-notice">*Users Managed Via Panel</p>
+                            <p class="app-link-card__ldap-notice">*Users Managed Via <a href="https://panel.{{$.BaseUri}}">Panel</a></p>
                         {{else}}
                             <p class="app-link-card__ldap-notice">*Users Not Managed Via Panel</p>
                         {{end}}
