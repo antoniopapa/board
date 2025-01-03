@@ -310,7 +310,7 @@ var allAppLinks = []AppLink{
 		Title: "Plane",
 		Description: "Project Management",
 		Image: "/static/img/plane.png",
-		Url: "https://castopod.{BASEURI}/",
+		Url: "https://plane.{BASEURI}/",
 		LDAP: false,
 		Tiers: map[string]bool {
 			"starter": false,
