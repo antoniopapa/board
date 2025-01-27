@@ -328,7 +328,7 @@ var allAppLinks = []AppLink{
 		Description: "Scheduling",
 		Image: "/static/img/cal.png",
 		Url: "https://calcom.{BASEURI}/",
-		LDAP: false,
+		LDAP: true,
 		Tiers: map[string]bool {
 			"starter": false,
 			"creator": false,
