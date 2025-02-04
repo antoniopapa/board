@@ -335,7 +335,7 @@ var allAppLinks = []AppLink{
 			"teams": false,
 			"enterprise": true,
 			"free": false,
-			"good": true,
+			"good": false,
 			"better": true,
 			"best": true,
 		},
