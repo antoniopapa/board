@@ -340,4 +340,22 @@ var allAppLinks = []AppLink{
 			"best": true,
 		},
 	},
+	{
+		Title: "Billing",
+		Description: "Manage your subscription",
+		Image: "/static/img/fed-star.png",
+		Url: "https://www.federated.computer/account",
+		LDAP: false,
+		SpecialNote: "Login handled with Federated Computer account.",
+		Tiers: map[string]bool {
+			"starter": true,
+			"creator": true,
+			"teams": true,
+			"enterprise": true,
+			"free": true,
+			"good": true,
+			"better": true,
+			"best": true,
+		},
+	},
 }
