@@ -58,7 +58,7 @@ func getAppLinks(tier, baseUri string) []AppLink {
 		links = append(links, AppLink{
 			Title:            envFile["TITLE"],
 			Description:      envFile["DESCRIPTION"],
-			Url:              strings.ReplaceAll(envFile["URL"], "{BASEURI}", baseUri),
+			Url:              "http://" + strings.ReplaceAll(envFile["URL"], "{BASEURI}", baseUri),
 			DocumentationUrl: envFile["DOCUMENTATION_URL"],
 			Image:            envFile["IMAGE"],
 			SpecialNote:      envFile["SPECIAL_NOTE"],
