@@ -1,4 +1,11 @@
 services:
+  board:
+    build: .
+    environment:
+      - DOMAIN=localhost
+    ports:
+      - 8080:8080
+
   baserow:
     build: services/baserow
     ports:
