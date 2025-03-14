@@ -50,6 +50,11 @@ func getAppLinks(tier, baseUri string) []AppLink {
 		better, _ := strconv.ParseBool(envFile["TIER_BETTER"])
 		best, _ := strconv.ParseBool(envFile["TIER_BEST"])
 
+		currTier, _ := strconv.ParseBool(envFile[fmt.Sprintf("TIER_%s", strings.ToUpper(tier))])
+		if !currTier {
+			continue
+		}
+
 		links = append(links, AppLink{
 			Title:            envFile["TITLE"],
 			Description:      envFile["DESCRIPTION"],
