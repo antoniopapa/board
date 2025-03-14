@@ -1,0 +1,77 @@
+services:
+  baserow:
+    build: services/baserow
+    ports:
+      - 8081:80
+  billing:
+    build: services/billing
+    ports:
+      - 8082:80
+  bookstack:
+    build: services/bookstack
+    ports:
+      - 8083:80
+  calcom:
+    build: services/calcom
+    ports:
+      - 8084:80
+  castpod:
+    build: services/castpod
+    ports:
+      - 8085:80
+  dittofeed:
+    build: services/dittofeed
+    ports:
+      - 8086:80
+  element:
+    build: services/element
+    ports:
+      - 8087:80
+  espocrm:
+    build: services/espocrm
+    ports:
+      - 8088:80
+  freescout:
+    build: services/freescout
+    ports:
+      - 8089:80
+  gitea:
+    build: services/gitea
+    ports:
+      - 8090:80
+  jitsi:
+    build: services/jitsi
+    ports:
+      - 8091:80
+  listmonk:
+    build: services/listmonk
+    ports:
+      - 8092:80
+  nextcloud:
+    build: services/nextcloud
+    ports:
+      - 8093:80
+  panel:
+    build: services/panel
+    ports:
+      - 8094:80
+  plane:
+    build: services/plane
+    ports:
+      - 8095:80
+  powerdns:
+    build: services/powerdns
+    ports:
+      - 8096:80
+  roundcube:
+    build: services/roundcube
+    ports:
+      - 8097:80
+  vaultwarden:
+    build: services/vaultwarden
+    ports:
+      - 8098:80
+  wordpress:
+    build: services/wordpress
+    ports:
+      - 8099:80
